@@ -1,111 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shades - Order Posters</title>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Shades Posters</title>
+  <!-- Bootstrap CSS -->
+  <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
   <style>
-    /* Color Palette */
+    /* Custom colors */
     :root {
-      --text-color: #3D3D3D; /* Charcoal Gray */
-      --background-color: #FFF6E5; /* Light Cream */
-      --wall-graphic-color: #FFC4C4; /* Pastel Peachy Pink */
-      --accent-color: #B4E1FF; /* Soft Sky Blue */
-      --star-color: #FFD27D; /* Soft Pastel Yellow */
+      --text-color: #AD8767;
+      --background-color: #FFF4E6;
+      --accent-color: #FFD27D;
+      --button-color: #90C9AE;
+      --hover-color: #AD8767;
     }
 
-    /* General Styles */
     body {
-      margin: 0;
-      font-family: 'Arial', sans-serif;
       background-color: var(--background-color);
       color: var(--text-color);
-      line-height: 1.6;
+      font-family: 'Arial', sans-serif;
     }
 
-    header {
-      background-color: var(--wall-graphic-color);
-      padding: 1.5rem;
-      text-align: center;
-      font-size: 2rem;
-      font-weight: bold;
-      color: var(--text-color);
+    .navbar, .footer {
+      background-color: var(--button-color);
+      color: #fff;
     }
 
-    .container {
-      padding: 2rem;
-      max-width: 800px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .poster-card {
-      background-color: var(--accent-color);
-      border: 1px solid var(--star-color);
-      padding: 1rem;
-      margin: 1rem 0;
+    .card {
+      border: 1px solid var(--text-color);
       border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
-    .poster-card h2 {
-      margin-top: 0;
-    }
-
-    .price {
-      font-size: 1.5rem;
-      color: var(--star-color);
-    }
-
-    button {
-      background-color: var(--wall-graphic-color);
-      color: var(--text-color);
+    .btn-custom {
+      background-color: var(--button-color);
+      color: #fff;
       border: none;
-      padding: 0.8rem 1.5rem;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 1rem;
-      margin-top: 1rem;
     }
 
-    button:hover {
-      background-color: var(--star-color);
+    .btn-custom:hover {
+      background-color: var(--hover-color);
     }
 
-    footer {
-      margin-top: 2rem;
-      padding: 1rem;
-      background-color: var(--wall-graphic-color);
+    .footer {
       text-align: center;
-      font-size: 0.9rem;
-      color: var(--text-color);
+      padding: 1rem;
+    }
+
+    /* Placeholder styling */
+    .placeholder-img {
+      background-color: #ddd;
+      width: 100%;
+      height: 200px;
+      display: block;
     }
   </style>
 </head>
 <body>
-  <header>
-    Shades - The Poster Company
-  </header>
-
-  <div class="container">
-    <h1>Order Your Favorite Posters</h1>
-    <p>Bring your walls to life with premium-quality posters in stunning designs!</p>
-
-    <div class="poster-card">
-      <h2>A4 Size Poster</h2>
-      <p class="price">₹50</p>
-      <button>Order Now</button>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand text-white" href="#">
+        <!-- Logo placeholder from assets folder -->
+        <img src="assets/logo-placeholder.png" alt="Logo" class="d-inline-block align-middle" style="width: 80px;"/>
+      </a>
+      <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#shop">Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
     </div>
+  </nav>
 
-    <div class="poster-card">
-      <h2>A5 Size Poster</h2>
-      <p class="price">₹25</p>
-      <button>Order Now</button>
+  <!-- Hero Section -->
+  <section class="py-5 text-center">
+    <div class="container">
+      <!-- Hero image placeholder from assets folder -->
+      <img src="assets/hero-placeholder.jpg" class="img-fluid mb-4 placeholder-img" alt="Hero Image"/>
+      <h1 class="display-4">Welcome to Shades Posters</h1>
+      <p class="lead">Choose from a variety of posters to decorate your space.</p>
+      <a class="btn btn-custom btn-lg" href="#shop">Shop Now</a>
     </div>
-  </div>
+  </section>
 
-  <footer>
-    © 2024 Shades - The Poster Company. All Rights Reserved.
+  <!-- Product Showcase -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Our Featured Products</h2>
+      <div class="row g-4">
+        <!-- Product 1 -->
+        <div class="col-md-4">
+          <div class="card">
+            <!-- Product image placeholder -->
+            <img src="assets/product1-placeholder.jpg" class="card-img-top placeholder-img" alt="Product 1">
+            <div class="card-body">
+              <h5 class="card-title">Poster 1</h5>
+              <p class="card-text">A beautiful poster for your living room.</p>
+              <a href="#" class="btn btn-custom">View Details</a>
+            </div>
+          </div>
+        </div>
+        <!-- Product 2 -->
+        <div class="col-md-4">
+          <div class="card">
+            <!-- Product image placeholder -->
+            <img src="assets/product2-placeholder.jpg" class="card-img-top placeholder-img" alt="Product 2">
+            <div class="card-body">
+              <h5 class="card-title">Poster 2</h5>
+              <p class="card-text">A stylish poster for your office.</p>
+              <a href="#" class="btn btn-custom">View Details</a>
+            </div>
+          </div>
+        </div>
+        <!-- Product 3 -->
+        <div class="col-md-4">
+          <div class="card">
+            <!-- Product image placeholder -->
+            <img src="assets/product3-placeholder.jpg" class="card-img-top placeholder-img" alt="Product 3">
+            <div class="card-body">
+              <h5 class="card-title">Poster 3</h5>
+              <p class="card-text">A modern design for your bedroom.</p>
+              <a href="#" class="btn btn-custom">View Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer bg-dark text-white">
+    <p>&copy; 2024 Shades Posters. All Rights Reserved.</p>
   </footer>
+
+  <!-- Bootstrap JS (optional, but needed for responsive navbar) -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
